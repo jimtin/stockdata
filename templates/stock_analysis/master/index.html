@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block pagetitle %} Homepage {% endblock %}
+{% block title %}Home{% endblock %}
+
+{% block primary %}
+
+    {% load staticfiles %}
+    {% if latest_question_list %}
+        <ul>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'stock_analysis:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+{% endblock %}

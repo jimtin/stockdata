@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'stock_analysis',
     'bootstrap3',
+    'twitter_bootstrap',
 )
 
 MIDDLEWARE_CLASSES = (
